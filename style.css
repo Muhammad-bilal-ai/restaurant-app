@@ -1,23 +1,50 @@
 :root {
   --dark-teal: rgb(28, 84, 80);
-  --darker-teal: rgb(17, 54, 52);
   --light-teal: rgb(57, 149, 143);
   --text-light: aliceblue;
 }
+:root {
+  --darker-teal: rgb(17, 54, 52);
+  --green-dark: #1c5450;
+  --green-mid: #27756f;
+  --green-light: #39958f;
+  --cream: #f5f0e8;
+  --white: #ffffff;
+  --text-light: rgba(255, 255, 255, 0.85);
+  --font-display: "Cormorant Garamond", serif;
+  --font-body: "Jost", sans-serif;
+}
 
-* {
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+}
+body {
+  font-family: var(--font-body);
 }
 
 header {
+  position: relative;
   min-height: 100vh;
   background-image: url("restaurant.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  padding: 0px 400px;
+  padding: 0px 6vw;
+}
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(0, 0, 0, 0.1) 20%,
+    rgba(0, 0, 0, 0.2) 50%
+  );
+  z-index: 0;
 }
 a {
   color: var(--text-light);
@@ -30,9 +57,26 @@ a {
   justify-content: space-between;
   align-items: center;
   font-size: 1rem;
+  position: relative;
+  z-index: 1;
+}
+.top-nav {
+  padding: 24px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 .logo {
+  display: flex;
+  align-items: center;
+  gap: 3px;
   color: var(--darker-teal);
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--white);
+  letter-spacing: 0.05em;
+}
+.logo i {
+  color: var(--green-dark);
+  font-size: 1.3rem;
 }
 .second-nav a {
   background-color: var(--dark-teal);
@@ -59,7 +103,7 @@ a {
 .highlight {
   background-color: var(--dark-teal) !important;
 }
-.content {
+.hero-content {
   margin-top: 300px;
   display: flex;
   flex-direction: column;
@@ -67,7 +111,7 @@ a {
   justify-content: flex-start;
   gap: 20px;
 }
-.content h3 {
+.hero-content h1 {
   background-color: var(--dark-teal);
   font-size: 1.8rem;
   color: var(--text-light);

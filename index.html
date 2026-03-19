@@ -8,30 +8,56 @@
       src="https://kit.fontawesome.com/ec525d2683.js"
       crossorigin="anonymous"
     ></script>
+    <!-- Cormorant Garamond: elegant serif for restaurant feel -->
+    <!-- Jost: clean modern sans for body text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Jost:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
     <title>restaurant app</title>
   </head>
   <body class="body">
     <!--== header ==-->
     <header>
-      <!-- 1st nav -->
-      <div class="nav">
-        <div class="logo"><i class="fa-solid fa-utensils"></i>Restaurant</div>
-        <div><a>call us 0800 100 030</a></div>
+      <div class="overlay"></div>
+      <!-- 1st nav logo + phone-->
+      <div class="nav top-nav">
+        <div class="logo">
+          <i class="fa-solid fa-utensils"></i><span>Restaurant</span>
+        </div>
+        <div>
+          <a href="tel:0800100030" class="phone-link">
+            <i class="fa-solid fa-phone"></i>
+            Call us 0800 100 030
+          </a>
+        </div>
       </div>
       <!-- 2nd nav -->
-      <div class="nav second-nav">
+      <nav class="nav second-nav">
         <a href="#" class="active">Home</a>
         <a href="#" class="navlink">About Us</a>
         <a href="#" class="navlink">Menu</a>
         <a href="#" class="navlink">Contact Us</a>
         <a href="#" class="highlight">Book a Table</a>
-      </div>
+      </nav>
 
       <!-- == content == -->
-      <div class="content">
-        <h3>Try Something New</h3>
-        <a class="white-link" href="#">Book a Table</a>
-        <a class="teal-link" href="#">View our Menu</a>
+      <div class="hero-content">
+        <h1 class="hero-heading">
+          Try Something<br />
+          <em>New Today</em>
+        </h1>
+        <p class="hero-description">
+          Fresh ingredients, bold flavors, unforgettable experience.
+        </p>
+        <!-- <a class="white-link" href="#">Book a Table</a>
+        <a class="teal-link" href="#">View our Menu</a> -->
+        <div class="hero-actions">
+          <a href="#" class="btn btn-primary">Book a Table</a>
+          <a href="#" class="btn btn-outline">View our Menu</a>
+        </div>
       </div>
     </header>
   </body>
